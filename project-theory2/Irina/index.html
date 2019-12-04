@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>wallet app</title>
+  <style>
+    .closed {
+      display: none;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .nav {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .active {
+      background: yellow;
+    }
+
+    .content {
+      margin-left: 20px;
+      border-left: 1px solid #eeeeee;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="@signin-form">
+    <input id="@signin-form/id" type="text" placeholder="enter your key" />
+    <input type="submit" value="enter" />
+  </form>
+  <div id="@dashboard" class="closed">
+    <div class="flex">
+      <div>
+        <ul>
+          <li><button class="nav active">btc</button></li>
+          <li><button class="nav">grc</button></li>
+          <li><button class="nav">nmc</button></li>
+          <li><button class="nav">nxt</button></li>
+          <li><button class="nav">ppc</button></li>
+          <li><button class="nav">xpm</button></li>
+        </ul>
+      </div>
+      <ul id="@dashboard/content" class="content">
+        <!-- users -->
+      </ul>
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
